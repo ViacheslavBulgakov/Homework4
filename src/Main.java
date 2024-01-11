@@ -14,13 +14,12 @@ public class Main {
         System.out.println("    Задание2");
 
         int tempReference = 5;
-        int tempReal = 3;
+        int tempReal = 5;
         if (tempReal > tempReference) {
             System.out.println("На улице " + tempReal + " градусов. Можно идти без шапки.");
-        } else if (tempReal < tempReference) {
+        } else  {
             System.out.println("На улице " + tempReal + " градусов. Нужно надеть шапку.");
-        } else
-            System.out.println("На улице " + tempReal + " градусов. Нужно идти с шапкой в кармане.");
+        }
 
 
         System.out.println("    Задание3");
@@ -67,26 +66,28 @@ public class Main {
 
         int placeSeating = 60;
         int placeStanding = 102;
-        int numberPassengers = 60;
+        int numberPassengers = 105;
         if (numberPassengers < placeSeating) {
             System.out.println("В вагоне имеются места для сидения.");
         } else if (numberPassengers >= placeSeating && numberPassengers < placeStanding) {
             System.out.println("В вагоне имеются стоячие места.");
-        } else if (numberPassengers == placeStanding) {
+        } else if (numberPassengers >= placeStanding) {
             System.out.println("Вагон уже полностью забит.");
         }
 
         System.out.println("    Задание7");
 
         int one = 5;
-        int two = 4;
+        int two = 3;
         int three = 3;
         if (one > two && one > three){
             System.out.println("Число " + one + " является максимальным из данных чисел." );
         } else if (two > one && two > three) {
             System.out.println("Число " + two + " является максимальным из данных чисел." );
-        } else {
+        } else if (three > one && three > two ){
             System.out.println("Число " + three + " является максимальным из данных чисел." );
+        } else {
+            System.out.println("Среди чисел нет одного максимального числа");
         }
     }
 }
